@@ -1,0 +1,13 @@
+{
+  "textoParceria": "Texto padrão de parceria não configurado.",
+  "cargoAutorizado": null,
+  "usuariosAutorizados": [
+    "441137428862992384",
+    "1533306874513068093"
+  ],
+  "embedConfig": {
+    "titulo": "Parceria Firmada!",
+    "cor": "#2b2d31",
+    "footer": "Sistema de Parcerias"
+  }
+}
