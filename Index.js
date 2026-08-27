@@ -26,7 +26,7 @@ client.once('ready', async () => {
             .setDescription('Abre o painel de configuração do sistema de parcerias.')
     ];
 
-    const rest = new REST({ version: '10' }).setToken('SEU_TOKEN_AQUI');
+    const rest = new REST({ version: '10' }).setToken('COLOQUE_SEU_TOKEN_AQUI');
     try {
         await rest.put(Routes.applicationCommands(client.user.id), { body: commands });
         console.log('Comando /parceria registrado com sucesso!');
@@ -121,14 +121,11 @@ client.on('messageCreate', async (message) => {
         if (!usuarioMencionado) return message.reply('<:alerta:1534611993410015456> Mencione o usuário da parceria que deseja apagar! Ex: `f.delparc @usuario`');
 
         try {
-            // Pega as últimas 50 mensagens do canal para procurar a parceria do usuário
             const mensagens = await message.channel.messages.fetch({ limit: 50 });
             let apagadas = 0;
 
             for (const msg of mensagens.values()) {
-                // Procura a mensagem do embed ou menção do usuário nas últimas mensagens do canal
                 if (msg.author.id === client.user.id && (msg.embeds.length > 0 && msg.embeds[0].description?.includes(usuarioMencionado.id))) {
-                    // Apaga o embed de confirmação e tenta apagar as 2 mensagens anteriores (texto do parceiro e nosso texto)
                     await msg.delete().catch(() => {});
                     apagadas++;
                 }
@@ -258,4 +255,5 @@ client.on('messageCreate', async (message) => {
     }
 });
 
-client.login('SEU_TOKEN_AQUI');
+// Lembre-se de substituir 'COLOQUE_SEU_TOKEN_AQUI' abaixo pelo token válido do seu bot:
+client.login('COLOQUE_SEU_TOKEN_AQUI');
