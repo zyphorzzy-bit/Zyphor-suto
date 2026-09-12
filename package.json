@@ -1,1 +1,13 @@
-
+{
+  "name": "zyphor-zombie",
+  "version": "2.0.0",
+  "description": "Bot de moderação e gerenciamento para WhatsApp",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.6.0",
+    "pino": "^9.0.0"
+  }
+}
