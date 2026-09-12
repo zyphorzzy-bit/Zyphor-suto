@@ -1,5 +1,5 @@
 module.exports = {
-  botName: "Zyphor Zombie",
+  botName: "Zyphor Bot",
   version: "2.0.0",
   prefix: ".",
   ownerNumber: "5512988625367@s.whatsapp.net",
@@ -8,3 +8,4 @@ module.exports = {
     group: "https://chat.whatsapp.com/KKndUto6ZyYL0EVQ2rkB1r"
   }
 };
+
